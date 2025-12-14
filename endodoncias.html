@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ENDODONCIA – Conserva tu diente, recupera tu tranquilidad | Terapré Dental Clinic</title>
+  <meta name="description" content="El dolor dental puede afectar tu bienestar. Endodoncia avanzada en Terapré Med Clinic Madrid: tratamiento de conducto preciso, con anestesia local, tecnología rotatoria y láser para mejor desinfección y recuperación más rápida." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/tailwind.css">
+  <style>
+    /* Force headings to use Poppins for consistent branding */
+    h1, h2, h3, .front-title { font-family: 'Poppins', sans-serif !important; }
+  </style>
+</head>
+
+<body class="tema-subtema bg-gradient-to-b from-sky-500 to-indigo-600 min-h-screen">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#4A4F54]">
+    <div class="mx-auto flex items-center justify-between px-3 h-16 md:h-16">
+      <nav class="hidden md:block mx-auto">
+        <ul class="flex items-center gap-8 text-base lg:text-lg font-bold">
+          <li><a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="index.html#especialidades">Especialidades</a></li>
+          <li><a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="casos_clinicos.html">Casos clínicos</a></li>
+          <li><a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="hidden md:block">
+        <a href="index.html#contacto" class="inline-flex items-center rounded-full px-5 py-2.5 text-white bg-slate-900 hover:bg-slate-800 font-semibold shadow">Reserva tu cita</a>
+      </div>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-white/90 hover:bg-white/10 focus:outline-none" aria-label="Abrir menú">
+        <svg id="menuIcon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out bg-[#4A4F54]">
+      <ul class="px-6 py-3 space-y-3 text-white/95 text-base font-semibold">
+        <li><a href="index.html#especialidades" class="block py-2">Especialidades</a></li>
+        <li><a href="casos_clinicos.html" class="block py-2">Casos clínicos</a></li>
+        <li><a href="index.html#contacto" class="block py-2">Contacto</a></li>
+        <li class="pt-2"><a href="index.html#contacto" class="inline-flex rounded-full px-4 py-2 bg-slate-900 text-white">Reserva tu cita</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="mainContent" class="pt-20">
+
+    <style>
+      /* Animación de aparición simple para .reveal (se activa con .is-visible por el script existente) */
+      .reveal { opacity: 0; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease; }
+      .reveal.is-visible { opacity: 1; transform: none; }
+    </style>
+
+  <!-- HERO estilo INDEX: logo, imagen desplazada a la derecha y texto a la izquierda -->
+  <section class="relative isolate overflow-hidden min-h-[72svh] lg:min-h-[78vh]">
+
+      <!-- Fondo (desplazado a la derecha para favorecer el texto a la izquierda) -->
+      <img src="images/ENDODONCIA.webp" alt="Consulta Terapré Dental" loading="lazy"
+           class="absolute inset-0 w-full h-[80vh] object-cover object-[72%_center] md:object-[75%_center] lg:object-[78%_center] z-0" />
+
+      <!-- Velo (izquierda) para contraste del texto -->
+      <div class="absolute inset-0 z-5" style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.65) 0%, rgba(0,0,0,.45) 38%, rgba(0,0,0,.22) 60%, rgba(0,0,0,0) 100%); backdrop-filter: saturate(85%) brightness(0.9);"></div>
+
+      <!-- Contenido: texto a la izquierda, centrado verticalmente -->
+<div class="relative z-10 h-full flex items-center" style="transform: translateY(160px); font-family: 'Inter', sans-serif;">
+  <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Texto movido ligeramente hacia el centro-izquierda -->
+    <div class="max-w-2xl text-left pt-12 lg:pt-16 -ml-8 lg:-ml-10">
+      <h1 class="text-white leading-tight drop-shadow-md">
+        <span style="font-family: 'Poppins', sans-serif;" class="block font-extrabold text-4xl sm:text-5xl lg:text-6xl">
+          ENDODONCIA
+        </span>
+        <span class="block text-white font-medium text-lg sm:text-xl lg:text-2xl mt-2">
+          Conserva tu diente, recupera tu tranquilidad
+        </span>
+      </h1>
+
+      <a href="#contacto" class="mt-6 inline-block rounded-full px-6 sm:px-8 py-2.5 sm:py-3 bg-white/90 text-slate-900 font-semibold shadow hover:bg-white">
+        Reserva tu cita
+      </a>
+    </div>
+  </div>
+</div>
+
+
+    </section>
+
+   <!-- Sección 3 – Alineadores Dentales -->
+<section class="bg-gradient-to-b from-white to-sky-50">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16 reveal text-slate-700">
+
+    <!-- Título principal -->
+    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight mb-4 text-center">
+      CONSERVAMOS TU DIENTE NATURAL GRACIAS A TRATAMIENTOS DIGITALES Y LA DESINFECCIÓN CON LÁSER PARA MEJORES RESULTADOS Y MENOR MOLESTIAS.
+    </h2>
+
+    <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <!-- Intro breve -->
+    <p class="max-w-4xl mx-auto text-lg sm:text-xl leading-relaxed text-slate-800 text-justify md:text-center mb-10">
+      En Terapré Med Clinic Madrid realizamos tratamientos de endodoncia para conservar piezas dentales dañadas y eliminar infecciones de raíz. 
+      Nuestro objetivo es salvar el diente natural siempre que sea posible, evitando extracciones innecesarias y devolviendo al paciente la tranquilidad de sonreír y comer sin dolor. 
+      Incorporamos la tecnología <strong>láser</strong> en todos nuestros procedimientos, lo que incrementa la desinfección de los conductos, reduce las molestias postoperatorias y mejora la recuperación.
+        </p>
+
+ <!-- Galería de casos - Cards con franja lateral degradada -->
+<section class="bg-gradient-to-b from-white to-sky-50 py-10">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+    <h3 class="text-2xl font-bold text-slate-900 mb-4 text-center">CASOS CON TECNOLOGÍA LÁSER</h3>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+
+      <!-- CARD -->
+      <div class="relative overflow-hidden rounded-2xl bg-white shadow-md border border-slate-200">
+        <div class="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-cyan-400 via-sky-500 to-indigo-500"></div>
+        <img src="images/endodoncia-1.webp" alt="Caso 1" class="w-full h-44 object-cover rounded-2xl">
+      </div>
+
+      <div class="relative overflow-hidden rounded-2xl bg-white shadow-md border border-slate-200">
+        <div class="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-cyan-400 via-sky-500 to-indigo-500"></div>
+        <img src="images/endodoncia-2.webp" alt="Caso 2" class="w-full h-44 object-cover rounded-2xl">
+      </div>
+
+      <div class="relative overflow-hidden rounded-2xl bg-white shadow-md border border-slate-200">
+        <div class="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-cyan-400 via-sky-500 to-indigo-500"></div>
+        <img src="images/endodoncia-3.webp" alt="Caso 3" class="w-full h-44 object-cover rounded-2xl">
+      </div>
+
+    </div>
+  </div>
+</section> 
+
+
+   <!-- BENEFICIOS PRINCIPALES (Endodoncia mejorado) -->
+<section class="bg-gradient-to-b from-white to-sky-50">
+  <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-16 md:py-20 reveal text-center">
+    
+    <!-- Título -->
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight mb-4">
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 via-sky-500 to-indigo-600">
+        BENEFICIOS PRINCIPALES DEL TRATAMIENTO
+      </span>
+    </h2>
+
+    <!-- Separador -->
+    <div class="flex justify-center mb-10">
+      <span class="inline-block w-20 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <!-- Lista de beneficios en tarjetas -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+      
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+        <div class="flex items-start">
+          <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-slate-700 text-lg leading-relaxed">
+            Conservación del diente natural, evitando prótesis o implantes prematuros.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+        <div class="flex items-start">
+          <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-slate-700 text-lg leading-relaxed">
+            Eliminación eficaz de la infección, el dolor y la inflamación.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+        <div class="flex items-start">
+          <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-slate-700 text-lg leading-relaxed">
+            Apoyo del <strong>láser</strong> en la desinfección profunda, alcanzando zonas donde los instrumentos convencionales no llegan.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+        <div class="flex items-start">
+          <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-slate-700 text-lg leading-relaxed">
+            Menor riesgo de reinfecciones gracias a la reducción de bacterias residuales.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+        <div class="flex items-start">
+          <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-slate-700 text-lg leading-relaxed">
+            Recuperación más cómoda, con menos inflamación y molestias posteriores.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+        <div class="flex items-start">
+          <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-slate-700 text-lg leading-relaxed">
+            Mayor precisión clínica y mejores pronósticos a largo plazo.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ¿Cuándo es necesaria una endodoncia? -->
+<section class="bg-gradient-to-b from-white to-sky-50">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-20 reveal">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+      <!-- Imagen izquierda con botón -->
+      <figure class="order-1 md:order-1 flex flex-col items-center">
+        <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+          <img src="images/endodoncia-4.webp"
+               alt="Paciente en consulta dental"
+               loading="lazy"
+               class="w-full h-64 md:h-72 lg:h-80 object-cover">
+        </div>
+
+          <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+        <a href="index.html#contacto"
+   class="mt-8 inline-block rounded-full px-10 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+   style="background-color:#16a34a!important; color:#ffffff!important;">
+  Agenda tu cita hoy mismo
+</a>
+      </figure>
+
+      <!-- Texto derecha -->
+      <div class="order-2 md:order-2">
+        <h2 id="indicaciones" class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight mb-4 text-center md:text-left">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-sky-600">
+            ¿CUÁNDO ES NECESARIA UNA ENDODONCIA?
+          </span>
+        </h2>
+
+        <p class="mt-3 text-lg md:text-xl text-slate-700 leading-relaxed">
+          La endodoncia se recomienda cuando la <strong>pulpa dental</strong> (el nervio del diente) está dañada o infectada.
+          Detectarlo a tiempo puede evitar complicaciones mayores y conservar el diente natural.
+        </p>
+
+        <!-- Lista con íconos -->
+        <ul class="mt-6 space-y-4 text-slate-700 text-lg md:text-xl">
+          <li class="flex items-start">
+            <span class="text-green-600 text-xl mr-3 mt-1">🦷</span>
+            <span>Caries profundas que alcanzan el nervio dental.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 text-xl mr-3 mt-1">🦷</span>
+            <span>Dolor intenso o sensibilidad prolongada al frío, calor o presión.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 text-xl mr-3 mt-1">🦷</span>
+            <span>Infecciones recurrentes con presencia de fístulas o abscesos.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 text-xl mr-3 mt-1">🦷</span>
+            <span>Fracturas dentales que exponen la pulpa.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 text-xl mr-3 mt-1">🦷</span>
+            <span>Traumatismos que comprometen la vitalidad del diente.</span>
+          </li>
+        </ul>
+
+        <p class="mt-6 text-lg text-slate-700 leading-relaxed border-l-4 border-green-500 pl-4 italic">
+          En cualquiera de estos casos, una endodoncia bien realizada puede salvar tu pieza dental y conservar su función durante muchos años.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- TECNOLOGÍA: Láser aplicado en endodoncia (mejorado) -->
+<section class="bg-gradient-to-b from-white to-sky-50">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16 reveal">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      <!-- Texto -->
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-sky-600">
+            TECNOLOGÍA LÁSER APLICADA EN ENDODONCIA
+          </span>
+        </h2>
+        <p class="mt-4 text-lg md:text-xl text-slate-700 leading-relaxed text-justify">
+          La incorporación del <strong>láser</strong> es uno de nuestros grandes diferenciadores. 
+          Mientras la instrumentación mecánica elimina el tejido afectado, el láser potencia la irrigación y la 
+          desinfección de los conductos radiculares. Esto permite eliminar bacterias con mayor profundidad, 
+          reducir la inflamación y favorecer una cicatrización más rápida, con menos molestias postoperatorias 
+          y una mejor experiencia para el paciente.
+        </p>
+        <!-- Badges -->
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="inline-flex items-center rounded-full border border-green-200 bg-green-50 px-3 py-1 text-sm font-medium text-green-700">Desinfección profunda</span>
+          <span class="inline-flex items-center rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">Menos inflamación</span>
+          <span class="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700">Recuperación más rápida</span>
+        </div>
+      </div>
+
+     <!-- Tarjetas de puntos clave centradas -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center">
+  <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col items-center justify-center">
+    <div class="flex items-center justify-center mb-2">
+      <span class="text-green-600 text-xl mr-2">✔</span>
+      <h3 class="font-semibold text-slate-900 text-lg">Irrigación optimizada</h3>
+    </div>
+    <p class="text-slate-700 text-sm max-w-xs">Mejor llegada del líquido a zonas complejas del sistema radicular.</p>
+  </div>
+
+  <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col items-center justify-center">
+    <div class="flex items-center justify-center mb-2">
+      <span class="text-green-600 text-xl mr-2">✔</span>
+      <h3 class="font-semibold text-slate-900 text-lg">Carga bacteriana reducida</h3>
+    </div>
+    <p class="text-slate-700 text-sm max-w-xs">Disminuye bacterias residuales y el riesgo de reinfección.</p>
+  </div>
+
+  <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col items-center justify-center">
+    <div class="flex items-center justify-center mb-2">
+      <span class="text-green-600 text-xl mr-2">✔</span>
+      <h3 class="font-semibold text-slate-900 text-lg">Menos molestias</h3>
+    </div>
+    <p class="text-slate-700 text-sm max-w-xs">Postoperatorio más cómodo y controlado.</p>
+  </div>
+
+  <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col items-center justify-center">
+    <div class="flex items-center justify-center mb-2">
+      <span class="text-green-600 text-xl mr-2">✔</span>
+      <h3 class="font-semibold text-slate-900 text-lg">Mejor pronóstico</h3>
+    </div>
+    <p class="text-slate-700 text-sm max-w-xs">Mayor precisión clínica y estabilidad a largo plazo.</p>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS ADICIONALES PARA EL PACIENTE (mejorado) -->
+<section class="bg-white">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16 reveal text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight mb-4">
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-sky-600">
+        BENEFICIOS ADICIONALES PARA EL PACIENTE
+      </span>
+    </h2>
+    <div class="flex justify-center mb-8">
+      <span class="inline-block w-20 h-1 rounded-full bg-gradient-to-r from-green-400 via-emerald-400 to-sky-400"></span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-4xl mx-auto">
+      <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+        <div class="flex items-start">
+          <span class="text-green-600 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-lg text-slate-700 leading-relaxed">
+            Procedimiento prácticamente indoloro gracias a la anestesia local y al apoyo del láser.
+          </p>
+        </div>
+      </div>
+      <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+        <div class="flex items-start">
+          <span class="text-green-600 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-lg text-slate-700 leading-relaxed">
+            Tratamiento más rápido y eficiente que la endodoncia convencional.
+          </p>
+        </div>
+      </div>
+      <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+        <div class="flex items-start">
+          <span class="text-green-600 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-lg text-slate-700 leading-relaxed">
+            Mayor tasa de éxito a largo plazo, evitando reinfecciones.
+          </p>
+        </div>
+      </div>
+      <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+        <div class="flex items-start">
+          <span class="text-green-600 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-lg text-slate-700 leading-relaxed">
+            Posibilidad de conservar piezas que de otro modo podrían perderse.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ (estático, sin animaciones ni desplegables) -->
+<section class="bg-gradient-to-b from-sky-50 to-white">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16 reveal">
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 text-center">
+      PREGUNTAS FRECUENTES (FAQ)
+    </h2>
+    <div class="flex justify-center mt-3 mb-10">
+      <span class="inline-block w-20 h-1 rounded-full bg-gradient-to-r from-green-400 via-emerald-400 to-sky-400"></span>
+    </div>
+
+    <div class="space-y-6 max-w-4xl mx-auto">
+      <!-- FAQ 1 -->
+      <div class="p-6 bg-white rounded-xl border border-slate-200">
+        <h3 class="text-2xl md:text-3xl font-bold text-slate-900 uppercase">¿DUELE HACERSE UNA ENDODONCIA?</h3>
+        <p class="mt-3 text-xl md:text-2xl text-slate-700 leading-relaxed">
+          No. Con anestesia y apoyo del láser, el procedimiento es seguro y con mínimas molestias posteriores.
+        </p>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="p-6 bg-white rounded-xl border border-slate-200">
+        <h3 class="text-2xl md:text-3xl font-bold text-slate-900 uppercase">¿EL LÁSER SUSTITUYE LA ENDODONCIA CONVENCIONAL?</h3>
+        <p class="mt-3 text-xl md:text-2xl text-slate-700 leading-relaxed">
+          No. La endodoncia sigue siendo el tratamiento principal; el láser es un complemento que mejora su eficacia.
+        </p>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="p-6 bg-white rounded-xl border border-slate-200">
+        <h3 class="text-2xl md:text-3xl font-bold text-slate-900 uppercase">¿QUÉ DURABILIDAD TIENE UN DIENTE TRATADO CON ENDODONCIA?</h3>
+        <p class="mt-3 text-xl md:text-2xl text-slate-700 leading-relaxed">
+          Con restauraciones adecuadas y buenos hábitos de higiene, puede durar toda la vida.
+        </p>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="p-6 bg-white rounded-xl border border-slate-200">
+        <h3 class="text-2xl md:text-3xl font-bold text-slate-900 uppercase">¿QUÉ PASA SI NO ME HAGO LA ENDODONCIA A TIEMPO?</h3>
+        <p class="mt-3 text-xl md:text-2xl text-slate-700 leading-relaxed">
+          La infección puede extenderse al hueso y tejidos cercanos, provocando complicaciones graves y pérdida del diente.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- CTA: Reserva cita -->
+    <section class="bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 reveal text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-4">RECUPERA LA SALUD DE TUS DIENTES</h2>
+        <p class="text-lg text-slate-700 max-w-2xl mx-auto mb-6">Recupera la salud de tus dientes con un tratamiento de endodoncia avanzado, más seguro y más confortable gracias a la tecnología láser.</p>
+        <a href="index.html#contacto" class="inline-flex items-center rounded-full px-6 py-3 bg-green-500 text-white font-semibold hover:bg-green-600">Agenda tu cita hoy mismo</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 py-6 bg-white mt-12 text-center">
+    <img src="images/Logo-Dental.png" alt="Logo Terapré Dental" class="mx-auto" style="max-width: 100px; height: auto;">
+    <p class="text-lg font-medium mt-2 mb-2">© <span id="year"></span> Terapré Dental</p>
+    <div class="flex justify-center gap-2 text-base text-yellow-600">
+      <a href="aviso-legal.html">Aviso Legal</a><span>–</span>
+      <a href="privacidad.html">Política de Privacidad</a><span>–</span>
+      <a href="cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+
+<!-- === NAV + UTILIDADES (bloque único para TODAS las páginas) === -->
+<script>
+// 0) Utilidades comunes (año, WhatsApp, menú móvil, flip-cards)
+(() => {
+  // Año
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  // WhatsApp (si hay formulario con onsubmit="enviarWhatsApp")
+  window.enviarWhatsApp = function(event){
+    event.preventDefault();
+    const g = id => document.getElementById(id)?.value || '';
+    const texto = encodeURIComponent(`Hola, soy ${g('nombre')}\nTeléfono: ${g('telefono')}\nEmail: ${g('email')}\nMensaje: ${g('mensaje')}`);
+    window.open(`https://wa.me/34910000000?text=${texto}`, '_blank', 'noopener');
+    event.target.reset();
+  };
+
+(() => {
+  if (window.__menuInit) return;
+  window.__menuInit = true;
+
+  const menuBtn    = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIconEl = document.getElementById('menuIcon');
+  if (!menuBtn || !mobileMenu || !menuIconEl) return;
+
+  let open = false;
+  const setIcon = (isOpen) => {
+    menuIconEl.innerHTML = isOpen
+      ? '<path d="M6 18L18 6M6 6l12 12" />'      /* X */
+      : '<path d="M3 6h18M3 12h18M3 18h18" />';  /* ☰ */
+  };
+
+  const applyState = () => {
+    // abre/cierra por altura
+    mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + 'px' : '0px';
+    // y visibilidad (tus páginas con animación usan .show)
+    mobileMenu.classList.toggle('show', open);
+    // accesibilidad
+    menuBtn.setAttribute('aria-expanded', String(open));
+    setIcon(open);
+    // impedir scroll del body cuando está abierto (opcional, cómodo en móvil)
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+
+  menuBtn.addEventListener('click', () => { open = !open; applyState(); });
+
+  // Si pasas a escritorio, cierra el drawer
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) { // ← ahora el corte es en lg
+      open = false; applyState();
+    }
+  });
+})();
+
+  // Flip-cards (inofensivo si no hay)
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('.flip-card');
+    if (card) card.classList.toggle('is-flipped');
+  });
+})();
+
+// 1) Navbar según página
+document.addEventListener('DOMContentLoaded', () => {
+  const navDesktopUL = document.querySelector('header nav ul');
+  const navMobileUL  = document.querySelector('#mobileMenu ul');
+const ctaDesktop = document.querySelector('header > div > div.hidden.md\\:block');
+  if (!navDesktopUL || !navMobileUL || !ctaDesktop) return;
+
+  // Limpia contenido previo para evitar duplicados
+  navDesktopUL.innerHTML = '';
+  navMobileUL.innerHTML  = '';
+
+  // ¿Dónde estamos?
+  const file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const isIndex = file === '' || file === 'index.html';
+
+  // Conjuntos pedidos
+  const NAV_INDEX = [
+    { href: 'index.html#especialidades', text: 'Especialidades' },
+    { href: 'casos_clinicos.html',       text: 'Casos clínicos' },
+    { href: 'index.html#contacto',       text: 'Contacto' }
+  ];
+  const NAV_OTHERS = [
+  { href: 'index.html#inicio',         text: 'Inicio' },
+  { href: 'index.html#especialidades', text: 'Especialidades' },
+  { href: 'alineadores.html',          text: 'Alineadores' },
+  { href: 'laser.html',                text: 'Láser' },
+  { href: 'endodoncias.html',          text: 'Endodoncia' },
+  { href: 'ortodoncia.html',           text: 'Ortodoncia' },
+  { href: 'casos_clinicos.html',       text: 'Casos clínicos' }
+];
+
+
+  const LINKS = isIndex ? NAV_INDEX : NAV_OTHERS;
+
+  // Dibuja enlaces (desktop + móvil)
+  const makeDesktopItem = ({href, text}) => {
+    const li = document.createElement('li');
+    li.innerHTML =
+`<a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-normal" href="${href}">${text}</a>`;
+    return li;
+  };
+  const makeMobileItem = ({href, text}) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="${href}" class="block py-2">${text}</a>`;
+    return li;
+  };
+
+  LINKS.forEach(link => {
+    navDesktopUL.appendChild(makeDesktopItem(link));
+    navMobileUL.appendChild(makeMobileItem(link));
+  });
+
+  // CTA (botón a la derecha)
+  // Index => "botón de acción" (Reserva tu cita). Otras páginas => "botón de contacto".
+  ctaDesktop.innerHTML = isIndex
+    ? `<a href="index.html#contacto" class="inline-flex items-center rounded-full px-5 py-2.5 text-white bg-green-500 hover:bg-green-600 font-semibold shadow">
+         Reserva tu cita
+       </a>`
+    : `<a href="index.html#contacto" class="inline-flex items-center rounded-full px-5 py-2.5 text-white bg-green-500 hover:bg-green-600 font-semibold shadow">
+         Contacto
+       </a>`;
+
+  // CTA en móvil (último item del drawer)
+  const liCTA = document.createElement('li');
+  liCTA.className = 'pt-2';
+  liCTA.innerHTML = `<a href="index.html#contacto" class="inline-flex rounded-full px-4 py-2 bg-slate-900 text-white">
+                       ${isIndex ? 'Reserva tu cita' : 'Contacto'}
+                     </a>`;
+  navMobileUL.appendChild(liCTA);
+
+  // Resaltado activo accesible
+  const currentKey =
+  isIndex ? 'index' :
+  file.includes('alineadores')   ? 'alineadores' :
+  file.includes('laser')         ? 'laser' :
+  file.includes('endodoncia')    ? 'endodoncias' :
+  file.includes('ortodoncia')    ? 'ortodoncia' :
+  file.includes('casos_clinicos')? 'casos_clinicos' : '';
+
+  const markActive = (container) => {
+    container.querySelectorAll('a').forEach(a => {
+      const href = (a.getAttribute('href') || '').toLowerCase();
+      const match =
+        (currentKey === 'alineadores'    && href.includes('alineadores.html')) ||
+        (currentKey === 'laser'          && href.includes('laser.html')) ||
+        (currentKey === 'endodoncias'    && href.includes('endodoncias.html')) ||
+        (currentKey === 'ortodoncia'    && href.includes('ortodoncia.html')) ||
+        (currentKey === 'casos_clinicos' && href.includes('casos_clinicos.html')) ||
+        (currentKey === 'index'          && href.includes('#inicio')); // si quisieras marcar "Inicio" en index
+
+      if (match) {
+  // quita clases que compiten
+  a.classList.remove('text-white/95','hover:text-sky-200');
+
+  // aplica verde y negrita
+  a.classList.add('font-bold');
+  a.style.setProperty('color', '#9fc6ac', 'important'); // verde del botón Alineadores
+
+  a.setAttribute('aria-current','page');
+}
+    });
+  };
+  markActive(navDesktopUL);
+  markActive(navMobileUL);
+});
+</script>
+<!-- === / NAV + UTILIDADES === -->
+
+<script>
+  (function () {
+    const items = Array.from(document.querySelectorAll('.reveal'));
+    if (!items.length) return;
+
+    // 1) Respeta reduce motion
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (media.matches) {
+      items.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+
+    // 2) Función para mostrar/ocultar con reflow (Safari-friendly)
+    const show = (el) => {
+      // Aseguramos estado inicial antes de animar
+      el.classList.remove('is-visible');
+      // Forzamos reflow para que el cambio compute antes de la transición
+      void el.offsetWidth; // <- magia: fuerza reflow
+      el.classList.add('is-visible');
+    };
+    const hide = (el) => {
+      el.classList.remove('is-visible');
+    };
+
+    // 3) Observer
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          show(entry.target);
+        } else {
+          // reset para permitir repetición
+          hide(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -10% 0px', // entra un pelín antes del borde inferior
+      threshold: 0.1
+    });
+
+    // 4) Observa todos los elementos
+    items.forEach(el => io.observe(el));
+
+    // 5) Asegura animación en elementos ya visibles al cargar
+    // Esperamos al siguiente frame para no perdernos el primer paint
+    requestAnimationFrame(() => {
+      items.forEach(el => {
+        const r = el.getBoundingClientRect();
+        const inView = r.top < window.innerHeight * 0.9 && r.bottom > 0;
+        if (inView) show(el);
+      });
+    });
+
+    // (opcional) Re-arma animaciones en resize/zoom raros
+    let t;
+    window.addEventListener('resize', () => {
+      clearTimeout(t);
+      t = setTimeout(() => {
+        items.forEach(el => {
+          const r = el.getBoundingClientRect();
+          const inView = r.top < window.innerHeight * 0.9 && r.bottom > 0;
+          if (inView) show(el); else hide(el);
+        });
+      }, 150);
+    });
+  })();
+</script>
+
+
+</body>
+</html>
