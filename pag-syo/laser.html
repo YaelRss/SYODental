@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LÁSER DENTAL – Precisión, confort y resultados visibles | S&O Dental</title>
+  <meta name="description" content="La tecnología láser en S&O Dental Madrid: procedimientos más precisos, menos dolor y recuperación más rápida. Aplicaciones en endodoncia, periodoncia, cirugía de encías y estética gingival." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/tailwind.css">
+  <style>
+    /* Force headings to use Poppins for consistent branding */
+    h1, h2, h3, .front-title { font-family: 'Poppins', sans-serif !important; }
+  </style>
+</head>
+
+<body class="tema-subtema bg-gradient-to-b from-sky-500 to-indigo-600 min-h-screen">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#4A4F54]">
+    <div class="mx-auto flex items-center justify-between px-3 h-16 md:h-16">
+      <nav class="hidden md:block mx-auto">
+        <ul class="flex items-center gap-8 text-base lg:text-lg font-bold">
+          <li><a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="index.html#especialidades">Especialidades</a></li>
+          <li><a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="casos_clinicos.html">Casos clínicos</a></li>
+          <li><a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="hidden md:block">
+        <a href="index.html#contacto" class="inline-flex items-center rounded-full px-5 py-2.5 text-white bg-slate-900 hover:bg-slate-800 font-semibold shadow">Reserva tu cita</a>
+      </div>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-white/90 hover:bg-white/10 focus:outline-none" aria-label="Abrir menú">
+        <svg id="menuIcon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out bg-[#4A4F54]">
+      <ul class="px-6 py-3 space-y-3 text-white/95 text-base font-semibold">
+        <li><a href="index.html#especialidades" class="block py-2">Especialidades</a></li>
+        <li><a href="casos_clinicos.html" class="block py-2">Casos clínicos</a></li>
+        <li><a href="index.html#contacto" class="block py-2">Contacto</a></li>
+        <li class="pt-2"><a href="index.html#contacto" class="inline-flex rounded-full px-4 py-2 bg-slate-900 text-white">Reserva tu cita</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="mainContent" class="pt-20">
+
+    <style>
+      /* Animación de aparición simple para .reveal (se activa con .is-visible por el script existente) */
+      .reveal { opacity: 0; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease; }
+      .reveal.is-visible { opacity: 1; transform: none; }
+    </style>
+
+  <!-- HERO estilo INDEX: logo, imagen desplazada a la derecha y texto a la izquierda -->
+  <section class="relative isolate overflow-hidden min-h-[72svh] lg:min-h-[78vh]">
+
+      <!-- Fondo (desplazado a la derecha para favorecer el texto a la izquierda) -->
+      <img src="images/laser-dental.webp" alt="Consulta S&O Dental" loading="lazy"
+           class="absolute inset-0 w-full h-[80vh] object-cover object-[72%_center] md:object-[75%_center] lg:object-[78%_center] z-0" />
+
+      <!-- Velo (izquierda) para contraste del texto -->
+      <div class="absolute inset-0 z-5" style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.65) 0%, rgba(0,0,0,.45) 38%, rgba(0,0,0,.22) 60%, rgba(0,0,0,0) 100%); backdrop-filter: saturate(85%) brightness(0.9);"></div>
+
+      <!-- Contenido: texto a la izquierda, centrado verticalmente -->
+<div class="relative z-10 h-full flex items-center" style="transform: translateY(160px); font-family: 'Inter', sans-serif;">
+  <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Texto movido ligeramente hacia el centro-izquierda -->
+    <div class="max-w-2xl text-left pt-12 lg:pt-16 -ml-8 lg:-ml-10">
+      <h1 class="text-white leading-tight drop-shadow-md">
+        <span style="font-family: 'Poppins', sans-serif;" class="block font-extrabold text-4xl sm:text-5xl lg:text-6xl">
+          LÁSER DENTAL
+        </span>
+        <span class="block text-white font-medium text-lg sm:text-xl lg:text-2xl mt-2">
+          Precisión, confort y resultados visibles
+        </span>
+      </h1>
+
+      <a href="#contacto" class="mt-6 inline-block rounded-full px-6 sm:px-8 py-2.5 sm:py-3 bg-white/90 text-slate-900 font-semibold shadow hover:bg-white">
+        Consulta y agenda
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+    </section>
+
+   <!-- Sección 3 – Alineadores Dentales -->
+<section class="bg-gradient-to-b from-white to-sky-50">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16 reveal text-slate-700">
+
+    <!-- Título principal -->
+    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 leading-tight mb-4 text-center">
+    PRECISIÓN, CONFORT Y RESULTADOS VISIBLES
+    </h2>
+
+    <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <!-- Descripción ampliada -->
+    <div class="max-w-4xl mx-auto text-slate-800 text-lg sm:text-xl leading-relaxed text-justify mb-8">
+      <p>La tecnología láser representa un cambio significativo en la forma de realizar tratamientos dentales. En S&O Dental Madrid la utilizamos como una herramienta complementaria que mejora la eficacia, reduce las molestias y acelera la recuperación de nuestros pacientes.</p>
+
+      <p class="mt-4">El láser actúa mediante un haz de luz concentrada capaz de eliminar bacterias, remodelar tejidos y sellar vasos sanguíneos sin necesidad de bisturí ni sangrado excesivo. Esto permite tratamientos más limpios, precisos y predecibles. Para el paciente, significa menos dolor, menos inflamación y una experiencia más relajada en el sillón dental.</p>
+
+      <p class="mt-4">La precisión del láser nos permite aplicarlo en distintas áreas: desde endodoncias y periodoncia hasta cirugía de encías, estética dental y tratamientos para sensibilidad. En todos los casos, el resultado es el mismo: mayor confort y una recuperación más rápida.</p>
+    </div>
+
+<div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <!-- Beneficios principales -->
+    <div class="text-center mb-8">
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight text-slate-900 mb-3 uppercase">BENEFICIOS PRINCIPALES</h1>
+
+      <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+      
+  <div class="max-w-3xl mx-auto text-slate-700">
+  <!-- Beneficios listados -->
+  </div>
+    </div>
+
+    <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-12">
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+        <div class="flex items-start">
+          <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-slate-700 text-lg leading-relaxed">Procedimientos más cómodos y sin sangrado.</p>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+        <div class="flex items-start">
+          <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-slate-700 text-lg leading-relaxed">Menor necesidad de anestesia en tratamientos leves.</p>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+        <div class="flex items-start">
+          <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-slate-700 text-lg leading-relaxed">Cicatrización más rápida y sin puntos.</p>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+        <div class="flex items-start">
+          <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-slate-700 text-lg leading-relaxed">Reducción del dolor postoperatorio.</p>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+        <div class="flex items-start">
+          <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-slate-700 text-lg leading-relaxed">Eliminación eficaz de bacterias y reducción del riesgo de infección.</p>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+        <div class="flex items-start">
+          <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+          <p class="text-slate-700 text-lg leading-relaxed">Resultados estéticos superiores y mayor precisión clínica.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aplicaciones frecuentes del láser dental -->
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-8 reveal">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+  <h3 class="text-3xl font-bold text-slate-900 mb-4">APLICACIONES MÁS FRECUENTES DEL LÁSER DENTAL</h3>
+  <p class="text-slate-700 text-lg leading-relaxed mb-4">La precisión del láser nos permite aplicarlo en múltiples áreas; entre las aplicaciones más habituales están:</p>
+  <ul class="space-y-3 text-slate-700 text-lg">
+  <li class="flex items-start"><span class="text-emerald-600 mr-3 mt-1">•</span><span>Endodoncia: mejora la limpieza y desinfección de los conductos radiculares.</span></li>
+  <li class="flex items-start"><span class="text-emerald-600 mr-3 mt-1">•</span><span>Periodoncia: elimina bacterias e inflamación sin dañar las encías sanas.</span></li>
+  <li class="flex items-start"><span class="text-emerald-600 mr-3 mt-1">•</span><span>Cirugía de encías: recortes y remodelaciones con mínima inflamación y sangrado.</span></li>
+  <li class="flex items-start"><span class="text-emerald-600 mr-3 mt-1">•</span><span>Estética gingival: aclara manchas o pigmentaciones en las encías.</span></li>
+  <li class="flex items-start"><span class="text-emerald-600 mr-3 mt-1">•</span><span>Sensibilidad dental: sella los túbulos dentinarios y reduce la hipersensibilidad.</span></li>
+  </ul>
+      </div>
+
+        <figure class="flex items-center justify-center">
+          <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-200 w-full">
+            <img src="images/tratamiento-laser-dental.webp" alt="Alineadores invisibles" class="w-full h-64 object-cover">
+          </div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <!-- FAQ -->
+    <section class="bg-gradient-to-b from-sky-50 to-white">
+      <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-12 reveal">
+        <h3 class="text-3xl font-bold text-slate-900 text-center mb-4">PREGUNTAS FRECUENTES (FAQ)</h3>
+        <div class="flex justify-center mb-6">
+          <span class="inline-block w-20 h-1 rounded-full bg-gradient-to-r from-green-400 via-emerald-400 to-sky-400"></span>
+        </div>
+
+        <div class="space-y-6 max-w-4xl mx-auto">
+          <div class="p-6 bg-white rounded-xl border border-slate-200">
+        <h4 class="text-lg md:text-xl font-bold text-slate-900 uppercase"><strong>¿El tratamiento con láser duele?</strong></h4>
+        <p class="mt-2 text-slate-700 text-base md:text-lg leading-relaxed">No. Es más cómodo que los métodos tradicionales y, en muchos casos, no requiere anestesia.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl border border-slate-200">
+        <h4 class="text-lg md:text-xl font-bold text-slate-900 uppercase"><strong>¿Se utiliza el láser en todos los tratamientos?</strong></h4>
+        <p class="mt-2 text-slate-700 text-base md:text-lg leading-relaxed">No siempre. El especialista decide su uso cuando aporta un beneficio real en precisión o confort.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl border border-slate-200">
+        <h4 class="text-lg md:text-xl font-bold text-slate-900 uppercase"><strong>¿Es seguro el uso del láser dental?</strong></h4>
+        <p class="mt-2 text-slate-700 text-base md:text-lg leading-relaxed">Sí. Es una tecnología aprobada, segura y utilizada por profesionales capacitados.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl border border-slate-200">
+        <h4 class="text-lg md:text-xl font-bold text-slate-900 uppercase"><strong>¿Qué resultados puedo esperar después de un tratamiento con láser?</strong></h4>
+        <p class="mt-2 text-slate-700 text-base md:text-lg leading-relaxed">Menos inflamación, menor dolor y una recuperación significativamente más rápida.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl border border-slate-200">
+        <h4 class="text-lg md:text-xl font-bold text-slate-900 uppercase"><strong>¿Tiene contraindicaciones?</strong></h4>
+        <p class="mt-2 text-slate-700 text-base md:text-lg leading-relaxed">No presenta riesgos relevantes cuando se usa correctamente, aunque se evalúa cada caso individualmente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <!-- CTA final específico para láser -->
+    <section class="bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 reveal text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-4">DESCUBRE CÓMO LA TECNOLOGÍA LÁSER PUEDE AYUDARTE</h2>
+        <p class="text-lg text-slate-700 max-w-2xl mx-auto mb-6">
+          Descubre cómo la tecnología láser puede hacer tus tratamientos más cómodos, seguros y estéticos. Consulta con nuestros especialistas y agenda tu cita hoy mismo.
+        </p>
+        <a href="index.html#contacto" class="inline-flex items-center rounded-full px-6 py-3 bg-green-500 text-white font-semibold hover:bg-green-600">
+          Agenda tu cita
+        </a>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 py-6 bg-white mt-12 text-center">
+    <img src="images/Logo-Dental.png" alt="Logo S&O Dental" class="mx-auto" style="max-width: 100px; height: auto;">
+    <p class="text-lg font-medium mt-2 mb-2">© <span id="year"></span> S&O Dental</p>
+    <div class="flex justify-center gap-2 text-base text-yellow-600">
+      <a href="aviso-legal.html">Aviso Legal</a><span>–</span>
+      <a href="privacidad.html">Política de Privacidad</a><span>–</span>
+      <a href="cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+
+<!-- === NAV + UTILIDADES (bloque único para TODAS las páginas) === -->
+<script>
+// 0) Utilidades comunes (año, WhatsApp, menú móvil, flip-cards)
+(() => {
+  // Año
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  // WhatsApp (si hay formulario con onsubmit="enviarWhatsApp")
+  window.enviarWhatsApp = function(event){
+    event.preventDefault();
+    const g = id => document.getElementById(id)?.value || '';
+    const texto = encodeURIComponent(`Hola, soy ${g('nombre')}\nTeléfono: ${g('telefono')}\nEmail: ${g('email')}\nMensaje: ${g('mensaje')}`);
+    window.open(`https://wa.me/34910000000?text=${texto}`, '_blank', 'noopener');
+    event.target.reset();
+  };
+
+(() => {
+  if (window.__menuInit) return;
+  window.__menuInit = true;
+
+  const menuBtn    = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIconEl = document.getElementById('menuIcon');
+  if (!menuBtn || !mobileMenu || !menuIconEl) return;
+
+  let open = false;
+  const setIcon = (isOpen) => {
+    menuIconEl.innerHTML = isOpen
+      ? '<path d="M6 18L18 6M6 6l12 12" />'      /* X */
+      : '<path d="M3 6h18M3 12h18M3 18h18" />';  /* ☰ */
+  };
+
+  const applyState = () => {
+    // abre/cierra por altura
+    mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + 'px' : '0px';
+    // y visibilidad (tus páginas con animación usan .show)
+    mobileMenu.classList.toggle('show', open);
+    // accesibilidad
+    menuBtn.setAttribute('aria-expanded', String(open));
+    setIcon(open);
+    // impedir scroll del body cuando está abierto (opcional, cómodo en móvil)
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+
+  menuBtn.addEventListener('click', () => { open = !open; applyState(); });
+
+  // Si pasas a escritorio, cierra el drawer
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) { // ← ahora el corte es en lg
+      open = false; applyState();
+    }
+  });
+})();
+
+  // Flip-cards (inofensivo si no hay)
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('.flip-card');
+    if (card) card.classList.toggle('is-flipped');
+  });
+})();
+
+// 1) Navbar según página
+document.addEventListener('DOMContentLoaded', () => {
+  const navDesktopUL = document.querySelector('header nav ul');
+  const navMobileUL  = document.querySelector('#mobileMenu ul');
+const ctaDesktop = document.querySelector('header > div > div.hidden.md\\:block');
+  if (!navDesktopUL || !navMobileUL || !ctaDesktop) return;
+
+  // Limpia contenido previo para evitar duplicados
+  navDesktopUL.innerHTML = '';
+  navMobileUL.innerHTML  = '';
+
+  // ¿Dónde estamos?
+  const file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const isIndex = file === '' || file === 'index.html';
+
+  // Conjuntos pedidos
+  const NAV_INDEX = [
+    { href: 'index.html#especialidades', text: 'Especialidades' },
+    { href: 'casos_clinicos.html',       text: 'Casos clínicos' },
+    { href: 'index.html#contacto',       text: 'Contacto' }
+  ];
+  const NAV_OTHERS = [
+  { href: 'index.html#inicio',         text: 'Inicio' },
+  { href: 'index.html#especialidades', text: 'Especialidades' },
+  { href: 'alineadores.html',          text: 'Alineadores' },
+  { href: 'laser.html',                text: 'Láser' },
+  { href: 'endodoncias.html',          text: 'Endodoncia' },
+  { href: 'ortodoncia.html',           text: 'Ortodoncia' },
+  { href: 'casos_clinicos.html',       text: 'Casos clínicos' }
+];
+
+
+  const LINKS = isIndex ? NAV_INDEX : NAV_OTHERS;
+
+  // Dibuja enlaces (desktop + móvil)
+  const makeDesktopItem = ({href, text}) => {
+    const li = document.createElement('li');
+    li.innerHTML =
+`<a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-normal" href="${href}">${text}</a>`;
+    return li;
+  };
+  const makeMobileItem = ({href, text}) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="${href}" class="block py-2">${text}</a>`;
+    return li;
+  };
+
+  LINKS.forEach(link => {
+    navDesktopUL.appendChild(makeDesktopItem(link));
+    navMobileUL.appendChild(makeMobileItem(link));
+  });
+
+  // CTA (botón a la derecha)
+  // Index => "botón de acción" (Reserva tu cita). Otras páginas => "botón de contacto".
+  ctaDesktop.innerHTML = isIndex
+    ? `<a href="index.html#contacto" class="inline-flex items-center rounded-full px-5 py-2.5 text-white bg-green-500 hover:bg-green-600 font-semibold shadow">
+         Reserva tu cita
+       </a>`
+    : `<a href="index.html#contacto" class="inline-flex items-center rounded-full px-5 py-2.5 text-white bg-green-500 hover:bg-green-600 font-semibold shadow">
+         Contacto
+       </a>`;
+
+  // CTA en móvil (último item del drawer)
+  const liCTA = document.createElement('li');
+  liCTA.className = 'pt-2';
+  liCTA.innerHTML = `<a href="index.html#contacto" class="inline-flex rounded-full px-4 py-2 bg-slate-900 text-white">
+                       ${isIndex ? 'Reserva tu cita' : 'Contacto'}
+                     </a>`;
+  navMobileUL.appendChild(liCTA);
+
+  // Resaltado activo accesible
+  const currentKey =
+  isIndex ? 'index' :
+  file.includes('alineadores')   ? 'alineadores' :
+  file.includes('laser')         ? 'laser' :
+  file.includes('endodoncia')    ? 'endodoncias' :
+  file.includes('ortodoncia')    ? 'ortodoncia' :
+  file.includes('casos_clinicos')? 'casos_clinicos' : '';
+
+  const markActive = (container) => {
+    container.querySelectorAll('a').forEach(a => {
+      const href = (a.getAttribute('href') || '').toLowerCase();
+      const match =
+        (currentKey === 'alineadores'    && href.includes('alineadores.html')) ||
+        (currentKey === 'laser'          && href.includes('laser.html')) ||
+        (currentKey === 'endodoncias'    && href.includes('endodoncias.html')) ||
+        (currentKey === 'ortodoncia'    && href.includes('ortodoncia.html')) ||
+        (currentKey === 'casos_clinicos' && href.includes('casos_clinicos.html')) ||
+        (currentKey === 'index'          && href.includes('#inicio')); // si quisieras marcar "Inicio" en index
+
+      if (match) {
+  // quita clases que compiten
+  a.classList.remove('text-white/95','hover:text-sky-200');
+
+  // aplica verde y negrita
+  a.classList.add('font-bold');
+  a.style.setProperty('color', '#9fc6ac', 'important'); // verde del botón Alineadores
+
+  a.setAttribute('aria-current','page');
+}
+    });
+  };
+  markActive(navDesktopUL);
+  markActive(navMobileUL);
+});
+</script>
+<!-- === / NAV + UTILIDADES === -->
+
+<script>
+  (function () {
+    const items = Array.from(document.querySelectorAll('.reveal'));
+    if (!items.length) return;
+
+    // 1) Respeta reduce motion
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (media.matches) {
+      items.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+
+    // 2) Función para mostrar/ocultar con reflow (Safari-friendly)
+    const show = (el) => {
+      // Aseguramos estado inicial antes de animar
+      el.classList.remove('is-visible');
+      // Forzamos reflow para que el cambio compute antes de la transición
+      void el.offsetWidth; // <- magia: fuerza reflow
+      el.classList.add('is-visible');
+    };
+    const hide = (el) => {
+      el.classList.remove('is-visible');
+    };
+
+    // 3) Observer
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          show(entry.target);
+        } else {
+          // reset para permitir repetición
+          hide(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -10% 0px', // entra un pelín antes del borde inferior
+      threshold: 0.1
+    });
+
+    // 4) Observa todos los elementos
+    items.forEach(el => io.observe(el));
+
+    // 5) Asegura animación en elementos ya visibles al cargar
+    // Esperamos al siguiente frame para no perdernos el primer paint
+    requestAnimationFrame(() => {
+      items.forEach(el => {
+        const r = el.getBoundingClientRect();
+        const inView = r.top < window.innerHeight * 0.9 && r.bottom > 0;
+        if (inView) show(el);
+      });
+    });
+
+    // (opcional) Re-arma animaciones en resize/zoom raros
+    let t;
+    window.addEventListener('resize', () => {
+      clearTimeout(t);
+      t = setTimeout(() => {
+        items.forEach(el => {
+          const r = el.getBoundingClientRect();
+          const inView = r.top < window.innerHeight * 0.9 && r.bottom > 0;
+          if (inView) show(el); else hide(el);
+        });
+      }, 150);
+    });
+  })();
+</script>
+
+
+</body>
+</html>
+
+<!-- Lightbox modal (para galería de alineadores) -->
+<div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-4">
+  <button id="lbClose" class="absolute top-4 right-4 text-white text-2xl" aria-label="Cerrar galería">×</button>
+  <button id="lbPrev" class="absolute left-4 text-white text-3xl" aria-label="Anterior">‹</button>
+  <div class="max-w-4xl w-full">
+    <img id="lbImg" src="" alt="" class="w-full h-auto rounded-xl shadow-2xl max-h-[80vh] object-contain">
+  </div>
+  <button id="lbNext" class="absolute right-4 text-white text-3xl" aria-label="Siguiente">›</button>
+</div>
+
+<script>
+(() => {
+  const images = [
+    'images/retenedor-1.jpg',
+    'images/retenedor-1.jpg/2.png',
+    'images/retenedor-1.jpg/3.png',
+    'images/retenedor-1.jpg/4.png',
+    'images/retenedor-1.jpg/5.png',
+    'images/retenedor-1.jpg/6.png'
+  ];
+
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbClose = document.getElementById('lbClose');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+
+  let idx = 0;
+
+  const open = (i) => {
+    idx = i; lbImg.src = images[idx]; lightbox.classList.remove('hidden'); document.body.style.overflow = 'hidden'; lbImg.focus?.();
+  };
+  const close = () => { lightbox.classList.add('hidden'); document.body.style.overflow = ''; };
+  const prev = () => { idx = (idx - 1 + images.length) % images.length; lbImg.src = images[idx]; };
+  const next = () => { idx = (idx + 1) % images.length; lbImg.src = images[idx]; };
+
+  // Bind gallery cards (divs with role=button)
+  document.querySelectorAll('.gallery-card').forEach(card => {
+    card.addEventListener('click', () => open(Number(card.dataset.index)));
+    // keyboard activation (Enter / Space)
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault(); open(Number(card.dataset.index));
+      }
+    });
+  });
+
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', prev);
+  lbNext.addEventListener('click', next);
+
+  // keyboard
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('hidden')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+
+  // click outside image closes
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+})();
+</script>

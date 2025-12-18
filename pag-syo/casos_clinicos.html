@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casos clínicos – S&O Dental</title>
+  <meta name="description" content="Casos clínicos de éxito en odontología avanzada: alineadores, endodoncia y láser dental en Madrid." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/tailwind.css">
+
+  <style>
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .animate-fade-in { animation: fadeIn 1s ease-in-out; }
+    .animate-slide-up { animation: slideUp 1s ease-in-out; }
+    .animate-zoom-in { animation: zoomIn 0.8s ease-in-out; }
+  </style>
+
+  <style>
+    :root { --brand:#0ea5e9; }
+    html { scroll-behavior:smooth; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .container { max-width: 1200px; margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 5rem); }
+    @media (min-width: 1536px){ .container { max-width: 1400px; } }
+    .glass { backdrop-filter: blur(6px); background: rgba(255,255,255,0.65); }
+    .logo-navbar { width: auto; height: 130px; }
+
+    /* Subrayado del menú */
+    .nav-underline { position: relative; text-decoration: none; }
+    .nav-underline::after {
+      content:""; position:absolute; left:0; bottom:-6px; height:2px; width:0;
+      background: currentColor; transition: width .25s ease;
+    }
+    .nav-underline:hover::after { width:100%; }
+
+    /* Flip Cards */
+    .flip-card { perspective: 1200px; height: 480px; touch-action: manipulation; }
+    @media (min-width: 640px){ .flip-card { height: 500px; } }
+    @media (min-width: 1024px){ .flip-card { height: 640px; } }
+
+    .flip-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.2,.7,.2,1); border-radius: 1rem; }
+    .flip-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: inherit; overflow: hidden; }
+    .flip-back { transform: rotateY(180deg); }
+    .flip-card.is-flipped .flip-inner { transform: rotateY(180deg); }
+
+    .card-shadow { box-shadow: 0 10px 30px rgba(0,0,0,.10); }
+    .card-shadow:hover { box-shadow: 0 16px 40px rgba(0,0,0,.16); }
+
+    /* --- Atractivo visual extra --- */
+
+/* Borde degradado sutil alrededor de la card */
+.gradient-frame {
+  background: linear-gradient(135deg, rgba(14,165,233,.35), rgba(99,102,241,.35), rgba(16,185,129,.35));
+  padding: 2px;                /* grosor del marco */
+  border-radius: 1.1rem;       /* un pelín más que la card interna */
+}
+
+/* Card interior flotante con glassy */
+.card-body {
+  background: rgba(255,255,255,0.95);
+  border-radius: 1rem;
+  backdrop-filter: blur(6px);
+}
+
+/* Brillo diagonal (shine) sobre la imagen del frente */
+.cover-wrap { position: relative; }
+.cover-shine::after {
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(75deg, transparent 35%, rgba(255,255,255,.35) 50%, transparent 65%);
+  transform: translateX(-120%);
+  transition: transform .8s cubic-bezier(.2,.7,.2,1);
+  pointer-events: none;
+}
+.gradient-frame:hover .cover-shine::after { transform: translateX(120%); }
+
+/* Hover: elevar + sombra */
+.gradient-frame { transition: transform .35s ease, box-shadow .35s ease; }
+.gradient-frame:hover { transform: translateY(-4px); box-shadow: 0 18px 45px rgba(0,0,0,.18); }
+
+/* Chapita (badge) arriba a la izquierda */
+.badge {
+  position:absolute; top:.75rem; left:.75rem;
+  background: rgba(2,6,23,.9);  /* slate-950-ish */
+  color:#fff; font-weight:700; font-size:.72rem;
+  padding:.35rem .55rem; border-radius:.6rem;
+  letter-spacing:.02em;
+}
+
+/* Botoncito “Girar” accesible en móvil (opcional) */
+.flip-hint {
+  position:absolute; bottom:.6rem; right:.6rem;
+  background: rgba(255,255,255,.9);
+  color:#0f172a; font-weight:600; font-size:.72rem;
+  padding:.3rem .55rem; border-radius:.6rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+}
+
+/* Mini tilt (3D suave) con mouse */
+[data-tilt] { transform-style: preserve-3d; }
+
+  </style>
+
+  
+</head>
+
+<body class="text-slate-800 antialiased">
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#4A4F54]">
+  <div class="mx-auto flex items-center justify-between px-3 h-16 md:h-16">
+    <nav class="hidden md:block mx-auto">
+      <ul class="flex items-center gap-8 text-base lg:text-lg font-bold">
+        <li><a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="index.html#especialidades">Especialidades</a></li>
+        <li><a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="casos_clinicos.html">Casos clínicos</a></li>
+        <li><a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="hidden md:block">
+      <a href="index.html#contacto" class="inline-flex items-center rounded-full px-5 py-2.5 text-white bg-slate-900 hover:bg-slate-800 font-semibold shadow">
+        Reserva tu cita
+      </a>
+    </div>
+    <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-white/90 hover:bg-white/10 focus:outline-none" aria-label="Abrir menú">
+      <svg id="menuIcon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 6h18M3 12h18M3 18h18" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out bg-[#4A4F54]">
+    <ul class="px-6 py-3 space-y-3 text-white/95 text-base font-semibold">
+      <li><a href="index.html#especialidades" class="block py-2">Especialidades</a></li>
+      <li><a href="casos_clinicos.html" class="block py-2">Casos clínicos</a></li>
+      <li><a href="index.html#contacto" class="block py-2">Contacto</a></li>
+      <li class="pt-2"><a href="index.html#contacto" class="inline-flex rounded-full px-4 py-2 bg-slate-900 text-white">Reserva tu cita</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="mainContent">
+  <section class="py-20 animate-fade-in">
+    <div class="container">
+      <div class="max-w-3xl">
+        <h2 class="text-2xl md:text-4xl font-bold animate-fade-in">Casos clínicos</h2>
+      </div>
+      <div id="casesGrid" class="mt-10 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8"></div>
+    </div>
+
+    <!-- Modal dos columnas: izquierda 2 imágenes del reverso, derecha texto -->
+    <div id="caseModal" class="fixed inset-0 z-50 hidden bg-black/70">
+      <div class="min-h-full flex items-center justify-center p-4">
+        <div class="w-full max-w-5xl max-h-[88vh] bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2">
+            <!-- Izquierda: solo back1 y back2 -->
+            <div class="bg-black p-3 md:p-4 flex flex-col gap-3">
+              <div class="w-full aspect-[4/3] bg-black/30 rounded-lg overflow-hidden ring-1 ring-white/10">
+                <img id="caseImgA" src="" alt="" class="w-full h-full object-contain">
+              </div>
+              <div class="w-full aspect-[4/3] bg-black/30 rounded-lg overflow-hidden ring-1 ring-white/10">
+                <img id="caseImgB" src="" alt="" class="w-full h-full object-contain">
+              </div>
+            </div>
+            <!-- Derecha: descripción -->
+            <div class="p-6 md:p-8 relative">
+              <button id="closeCase" class="absolute top-3 right-3 bg-slate-100 hover:bg-slate-200 rounded-md px-3 py-2 shadow">✕</button>
+              <h3 id="caseTitle" class="text-2xl font-bold"></h3>
+              <p id="caseSummary" class="mt-2 text-slate-600"></p>
+              <ul id="caseBullets" class="mt-4 space-y-2 text-slate-700 list-disc list-inside"></ul>
+              <a href="index.html#contacto"
+                 class="inline-block mt-6 rounded-full px-5 py-2.5 text-white bg-slate-900 hover:bg-slate-800 font-semibold shadow">
+                Reserva tu cita
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<footer class="border-t border-slate-200 py-2 bg-white">
+  <div class="container flex flex-col items-center gap-4 text-center">
+    <img src="images/Logo-Dental.png" alt="Logo S&O Dental" class="logo-footer" style="max-width: 100px; height: auto;">
+    <p class="text-lg font-medium mt-2 mb-2">Copyright © <span id="year"></span> S&O Dental</p>
+    <div class="flex flex-wrap justify-center gap-2 text-base" style="color:goldenrod;">
+      <a href="aviso-legal.html">Aviso Legal</a><span>–</span>
+      <a href="privacidad.html">Política de Privacidad</a><span>–</span>
+      <a href="cookies.html">Política de Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  // Año en footer
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  // Menú móvil
+  if (!window.__menuInit) {
+    window.__menuInit = true;
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIconEl = document.getElementById('menuIcon');
+    if (menuBtn && mobileMenu && menuIconEl) {
+      let open = false;
+      const setIcon = (isOpen) => {
+        menuIconEl.innerHTML = isOpen
+          ? '<path d="M6 18L18 6M6 6l12 12" />'
+          : '<path d="M3 6h18M3 12h18M3 18h18" />';
+      };
+      const applyState = () => {
+        mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + 'px' : '0px';
+        mobileMenu.classList.toggle('show', open);
+        menuBtn.setAttribute('aria-expanded', String(open));
+        setIcon(open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      };
+      menuBtn.addEventListener('click', () => { open = !open; applyState(); });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1024) { open = false; applyState(); }
+      });
+    }
+  }
+})();
+</script>
+
+<script>
+// Navbar activo según página
+document.addEventListener('DOMContentLoaded', () => {
+  const navDesktopUL = document.querySelector('header nav ul');
+  const navMobileUL  = document.querySelector('#mobileMenu ul');
+  const ctaDesktop   = document.querySelector('header > div > div.hidden.md\\:block');
+  if (!navDesktopUL || !navMobileUL || !ctaDesktop) return;
+
+  navDesktopUL.innerHTML = '';
+  navMobileUL.innerHTML  = '';
+
+  const file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const isIndex = file === '' || file === 'index.html';
+
+  const NAV_INDEX = [
+    { href: 'index.html#especialidades', text: 'Especialidades' },
+    { href: 'casos_clinicos.html',       text: 'Casos clínicos' },
+    { href: 'index.html#contacto',       text: 'Contacto' }
+  ];
+  const NAV_OTHERS = [
+    { href: 'index.html#inicio',         text: 'Inicio' },
+    { href: 'alineadores.html',          text: 'Alineadores' },
+    { href: 'endodoncias.html',          text: 'Endodoncia' },
+    { href: 'laser.html',                text: 'Láser' },
+    { href: 'ortodoncia.html',           text: 'Ortodoncia' },
+    { href: 'index.html#especialidades', text: 'Especialidades' },
+    { href: 'casos_clinicos.html',       text: 'Casos clínicos' }
+  ];
+  const LINKS = isIndex ? NAV_INDEX : NAV_OTHERS;
+
+  const makeDesktopItem = ({href, text}) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="${href}">${text}</a>`;
+    return li;
+  };
+  const makeMobileItem = ({href, text}) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="${href}" class="block py-2">${text}</a>`;
+    return li;
+  };
+  LINKS.forEach(link => {
+    navDesktopUL.appendChild(makeDesktopItem(link));
+    navMobileUL.appendChild(makeMobileItem(link));
+  });
+
+  ctaDesktop.innerHTML =
+    `<a href="index.html#contacto" class="inline-flex items-center rounded-full px-5 py-2.5 text-white bg-green-500 hover:bg-green-600 font-semibold shadow">
+       ${isIndex ? 'Reserva tu cita' : 'Contacto'}
+     </a>`;
+
+  const currentKey =
+    isIndex ? 'index' :
+    file.includes('alineadores')   ? 'alineadores' :
+    file.includes('endodoncia')    ? 'endodoncias' :
+    file.includes('laser')         ? 'laser' :
+    file.includes('ortodoncia')    ? 'ortodoncia' :
+    file.includes('casos_clinicos')? 'casos_clinicos' : '';
+
+  const markActive = (container) => {
+    container.querySelectorAll('a').forEach(a => {
+      const href = (a.getAttribute('href') || '').toLowerCase();
+      const match =
+        (currentKey === 'alineadores'    && href.includes('alineadores.html')) ||
+        (currentKey === 'endodoncias'    && href.includes('endodoncias.html')) ||
+        (currentKey === 'laser'          && href.includes('laser.html')) ||
+        (currentKey === 'ortodoncia')    && href.includes('ortodoncia.html') ||
+        (currentKey === 'casos_clinicos' && href.includes('casos_clinicos.html')) ||
+        (currentKey === 'index'          && href.includes('#inicio'));
+      if (match) {
+        a.classList.remove('text-white/95','hover:text-sky-200');
+        a.classList.add('font-bold');
+        a.style.setProperty('color', '#9fc6ac', 'important');
+        a.setAttribute('aria-current','page');
+      }
+    });
+  };
+  markActive(navDesktopUL);
+  markActive(navMobileUL);
+});
+</script>
+
+<script>
+/* =========================
+  2) Datos de Casos Clínicos
+  ========================= */
+const CASES = {
+  apinamiento_severo: {
+   title: "Apiñamiento severo",
+   summary: "Expansión y alineación por fases.",
+   bullets: ["Expansión controlada","IPR selectivo","Retención con férula"],
+   images: [
+    "images/portadas-casos/apinamiento-severo.webp",      // Portada (frente)
+    "images/casos_clinicos/1.png",    // Reverso 1
+    "images/casos_clinicos/2.png"     // Reverso 2
+   ]
+  },
+  dientes_inclinados_delante: {
+   title: "Dientes inclinados delante",
+   summary: "Corrección de protrusión con control de torque y retracción.",
+   bullets: ["Mini-tornillos de anclaje","Elásticos clase II","Finalización estética"],
+   images: [
+    "images/portadas-casos/dientes-inclinados.webp",
+    "images/casos_clinicos/3.png",
+    "images/casos_clinicos/4.png"
+   ]
+  },
+  clase_2_extracciones: {
+   title: "Clase II con extracciones",
+   summary: "Extracciones estratégicas para corrección sagital y perfil.",
+   bullets: ["Cierre de espacios","Control de anclaje","Ajuste oclusal"],
+   images: [
+    "images/portadas-casos/clase2-extracciones.webp",
+    "images/casos_clinicos/5.png",
+    "images/casos_clinicos/6.png"
+   ]
+  },
+  clase_2_sin_extraccion: {
+   title: "Clase II sin extracción",
+   summary: "Distalización secuencial y corrección sagital sin extracciones.",
+   bullets: ["Alineadores con attachments","Elásticos clase II","Retención con essix"],
+   images: [
+    "images/portadas-casos/clase2-sin-extraccion.webp",
+    "images/casos_clinicos/27.png",
+    "images/casos_clinicos/28.png"
+   ]
+  },
+  clase_3_extracciones: {
+   title: "Clase III con extracciones",
+   summary: "Coordinación de arcadas con extracciones selectivas.",
+   bullets: ["Control de perfil","Coordinación transversal","Ajuste de guías"],
+   images: [
+    "images/portadas-casos/clase3-extracciones.webp",
+    "images/casos_clinicos/9.png",
+    "images/casos_clinicos/10.png"
+   ]
+  },
+  menton_retrognatico: {
+   title: "Mentón retrognático",
+   summary: "Plan combinado ortodoncia/ortognática.",
+   bullets: ["Planificación 3D","Compensación dental","Retención postquirúrgica"],
+   images: [
+    "images/portadas-casos/menton-retrognatico.webp",
+    "images/casos_clinicos/7.png",
+    "images/casos_clinicos/8.png"
+   ]
+  },
+  mordida_profunda: {
+   title: "Mordida profunda",
+   summary: "Intrusión anterior/extrusión posterior para nivelación.",
+   bullets: ["Arcos de intrusión","Bite turbos","Refinamiento de guías"],
+   images: [
+    "images/portadas-casos/mordida-profunda.webp",
+    "images/casos_clinicos/11.png",
+    "images/casos_clinicos/12.png"
+   ]
+  },
+  cara_corta: {
+   title: "Cara corta",
+   summary: "Optimización funcional y estética con aumento de altura facial.",
+   bullets: ["Control de dimensión vertical","Reposicionamiento dentoalveolar","Seguimiento a 12 meses"],
+   images: [
+    "images/portadas-casos/cara-corta.webp",
+    "images/casos_clinicos/19.png",
+    "images/casos_clinicos/20.png"
+   ]
+  },
+  diseno_de_sonrisa: {
+   title: "Diseño de sonrisa",
+   summary: "Planificación digital y restauraciones mínimamente invasivas.",
+   bullets: ["Análisis facial y dental","Mock-up guiado","Carillas ultrafinas"],
+   images: [
+    "images/portadas-casos/diseno-sonrisa.webp",
+    "images/casos_clinicos/17.png",
+    "images/casos_clinicos/18.png"
+   ]
+  },
+  mordida_abierta: {
+   title: "Mordida abierta",
+   summary: "Cierre vertical con intrusión posterior y control de hábitos.",
+   bullets: ["Mini-tornillos posteriores","Elásticos verticales","Reeducación miofuncional"],
+   images: [
+    "images/portadas-casos/mordida-abierta.webp",
+    "images/casos_clinicos/22.1.png",
+    "images/casos_clinicos/25.1.png"
+   ]
+  }
+};
+
+/* =====================================================
+  Inyectar estilos para aumentar tamaño de letra en cards
+  ===================================================== */
+(function injectCardFontStyles(){
+  const css = `
+/* Frente (card-body) - aumentado un poco */
+.flip-card .card-body h3 {
+  font-size: 1.25rem; /* ~20px */
+  line-height: 1.15;
+}
+@media (min-width: 768px) {
+  .flip-card .card-body h3 { font-size: 1.375rem; /* ~22px */ }
+}
+.flip-card .card-body p {
+  font-size: 1.0625rem; /* ~17px */
+  line-height: 1.45;
+}
+
+/* Reverso (flip-back) - sin cambios */
+.flip-card .flip-back h3 {
+  font-size: 1.125rem;
+  line-height: 1.15;
+}
+@media (min-width: 768px) {
+  .flip-card .flip-back h3 { font-size: 1.25rem; }
+}
+.flip-card .flip-back .mt-3,
+.flip-card .flip-back .text-xs {
+  font-size: 0.95rem;
+}
+
+/* Ajustes generales para mejor legibilidad */
+.flip-card { font-size: 1rem; }
+.flip-card .p-6, .flip-card .p-4 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+`;
+  const style = document.createElement('style');
+  style.setAttribute('data-generated','cases-font-size');
+  style.appendChild(document.createTextNode(css));
+  document.head.appendChild(style);
+})();
+</script>
+
+<script>
+/* ==========================================================
+   3) Render de Flip-Cards (reverso = 2 imágenes completas)
+   ========================================================== */
+(() => {
+  const grid = document.getElementById('casesGrid');
+  if (!grid || typeof CASES !== 'object') return;
+
+ const makeCard = (key, data) => {
+  const imgs = Array.isArray(data.images) ? data.images : [];
+  const cover = imgs[0] || '';
+  const back1 = imgs[1] || cover;
+  const back2 = imgs[2] || imgs[1] || cover;
+
+  return `
+    <div class="flip-card bg-transparent rounded-2xl card-shadow ring-1 ring-black/5 cursor-pointer" data-flip tabindex="0" role="button" aria-pressed="false">
+      <div class="flip-inner">
+        <!-- Frente con efecto glassy + shine -->
+        <div class="flip-face card-body">
+          <div class="cover-wrap cover-shine aspect-[4/3] rounded-t-[1rem] overflow-hidden">
+            <img src="${cover}" alt="${data.title || ''}" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-base font-extrabold tracking-wide text-slate-900 uppercase">${data.title || ''}</h3>
+            <p class="mt-2 text-slate-600">${data.summary || ''}</p>
+          </div>
+        </div>
+
+        <!-- Reverso: 2 imágenes completas SIN recorte -->
+        <div class="flip-face flip-back bg-slate-900 text-white">
+          <div class="p-4 sm:p-6 h-full flex flex-col">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-lg font-extrabold uppercase">${data.title || ''}</h3>
+              <button type="button"
+                      class="px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/20 text-sm"
+                      data-flip-back aria-label="Volver al frente">Volver</button>
+            </div>
+
+            <div class="flex-1 grid grid-rows-2 gap-3 min-h-0">
+              <button class="block w-full rounded-lg ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-white">
+                <div class="w-full h-full rounded-lg bg-black/20 flex items-center justify-center" style="height: 100%;">
+                  <img src="${back1}" alt="${data.title || ''} imagen 1"
+                       class="w-auto h-auto max-w-full max-h-full object-contain">
+                </div>
+              </button>
+
+              <button class="block w-full rounded-lg ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-white">
+                <div class="w-full h-full rounded-lg bg-black/20 flex items-center justify-center" style="height: 100%;">
+                  <img src="${back2}" alt="${data.title || ''} imagen 2"
+                       class="w-auto h-auto max-w-full max-h-full object-contain">
+                </div>
+              </button>
+            </div>
+
+            <div class="mt-3 text-xs text-white/60">Toca para ver detalles del caso.</div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+};
+
+
+  grid.innerHTML = Object.entries(CASES).map(([k,v]) => makeCard(k,v)).join('');
+})();
+</script>
+
+<script>
+/* ==========================================================
+   4) Delegación de eventos (Flip + Apertura modal)
+   ========================================================== */
+(() => {
+  const grid = document.getElementById('casesGrid');
+  if (!grid) return;
+
+  const shouldIgnore = (target) =>
+  !!target.closest('[data-open-case], [data-flip-back]');
+
+
+  // Flip por click/tap
+  grid.addEventListener('pointerdown', (e) => {
+    const card = e.target.closest('[data-flip]');
+    if (!card) return;
+    if (shouldIgnore(e.target)) return;
+    const flipped = card.classList.toggle('is-flipped');
+    card.setAttribute('aria-pressed', String(flipped));
+  });
+
+  // Botón volver
+  grid.addEventListener('pointerdown', (e) => {
+    const backBtn = e.target.closest('[data-flip-back]');
+    if (!backBtn) return;
+    const card = e.target.closest('[data-flip]');
+    if (card) {
+      card.classList.remove('is-flipped');
+      card.setAttribute('aria-pressed', 'false');
+    }
+  });
+
+  // Teclado accesible
+  grid.addEventListener('keydown', (e) => {
+    if (!['Enter',' '].includes(e.key)) return;
+    const card = e.target.closest('[data-flip]');
+    if (!card || shouldIgnore(e.target)) return;
+    e.preventDefault();
+    const flipped = card.classList.toggle('is-flipped');
+    card.setAttribute('aria-pressed', String(flipped));
+  });
+
+  // Miniaturas del reverso abren modal
+  grid.addEventListener('click', (e) => {
+    const thumb = e.target.closest('[data-open-case]');
+    if (!thumb) return;
+    const key = thumb.getAttribute('data-open-case');
+    openCase(key);
+  });
+})();
+</script>
+
+<script>
+/* ==========================================================
+   5) Modal 2 columnas (solo imágenes del reverso)
+   ========================================================== */
+const modal   = document.getElementById("caseModal");
+const imgAEl  = document.getElementById("caseImgA");
+const imgBEl  = document.getElementById("caseImgB");
+const titleEl = document.getElementById("caseTitle");
+const sumEl   = document.getElementById("caseSummary");
+const bulletsEl = document.getElementById("caseBullets");
+const closeBtn= document.getElementById("closeCase");
+
+function openCase(caseKey){
+  const data = CASES[caseKey];
+  if (!data) return;
+
+  const imgs = Array.isArray(data.images) ? data.images : [];
+  // Tomamos SOLO las del reverso (posiciones 1 y 2)
+  const backImgs = [imgs[1], imgs[2]].filter(Boolean);
+  const leftA = backImgs[0] || imgs[0] || "";
+  const leftB = backImgs[1] || backImgs[0] || imgs[0] || "";
+
+  imgAEl.src = leftA;
+  imgBEl.src = leftB;
+
+  titleEl.textContent = data.title || "";
+  sumEl.textContent   = data.summary || "";
+  bulletsEl.innerHTML = (data.bullets || []).map(li => `<li>${li}</li>`).join("");
+
+  modal.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+}
+
+function closeCase(){
+  modal.classList.add("hidden");
+  document.body.style.overflow = "";
+  imgAEl.src = "";
+  imgBEl.src = "";
+}
+
+closeBtn.addEventListener("click", closeCase);
+modal.addEventListener("click", (e) => { if (e.target === modal) closeCase(); });
+document.addEventListener("keydown", (e) => {
+  if (modal.classList.contains("hidden")) return;
+  if (e.key === "Escape") closeCase();
+});
+</script>
+
+</body>
+</html>

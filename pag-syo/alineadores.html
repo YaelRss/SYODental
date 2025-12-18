@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alineadores invisibles. Resultados visibles. | S&O Dental</title>
+  <meta name="description" content="Alineadores transparentes con método 16x4: planificación 3D, seguimiento estrecho y resultados predecibles. Tratamiento cómodo y prácticamente invisible." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/tailwind.css">
+</head>
+
+<body class="tema-subtema bg-gradient-to-b from-sky-500 to-indigo-600 min-h-screen">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#4A4F54]">
+    <div class="mx-auto flex items-center justify-between px-3 h-16 md:h-16">
+      <nav class="hidden md:block mx-auto">
+        <ul class="flex items-center gap-8 text-base lg:text-lg font-bold">
+          <li><a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="index.html#especialidades">Especialidades</a></li>
+          <li><a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="casos_clinicos.html">Casos clínicos</a></li>
+          <li><a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-wide" href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="hidden md:block">
+        <a href="index.html#contacto" class="inline-flex items-center rounded-full px-5 py-2.5 text-white bg-slate-900 hover:bg-slate-800 font-semibold shadow">Reserva tu cita</a>
+      </div>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-white/90 hover:bg-white/10 focus:outline-none" aria-label="Abrir menú">
+        <svg id="menuIcon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out bg-[#4A4F54]">
+      <ul class="px-6 py-3 space-y-3 text-white/95 text-base font-semibold">
+        <li><a href="index.html#especialidades" class="block py-2">Especialidades</a></li>
+        <li><a href="casos_clinicos.html" class="block py-2">Casos clínicos</a></li>
+        <li><a href="index.html#contacto" class="block py-2">Contacto</a></li>
+        <li class="pt-2"><a href="index.html#contacto" class="inline-flex rounded-full px-4 py-2 bg-slate-900 text-white">Reserva tu cita</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="mainContent" class="pt-20">
+
+    <style>
+      /* Animación de aparición para .reveal: aparición gradual al cargar la página.
+         Usamos una transición suave y menor desplazamiento para que el texto aparezca "gradualmente".
+      */
+      .reveal { opacity: 0; transform: translateY(6px); transition: opacity .8s cubic-bezier(.2,.9,.2,1), transform .8s cubic-bezier(.2,.9,.2,1); }
+      .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    </style>
+
+  <!-- HERO estilo INDEX: logo, imagen desplazada a la derecha y texto a la izquierda -->
+  <section class="relative isolate overflow-hidden min-h-[72svh] lg:min-h-[78vh]">
+
+      <!-- Fondo (desplazado a la derecha para favorecer el texto a la izquierda) -->
+     <img src="images/retenedor-2.webp" alt="Consulta S&O Dental" loading="lazy"
+  class="absolute inset-0 w-full h-[80vh] object-contain z-0 transition-transform duration-500"
+  style="transform: scale(1.1) translateX(0%) translateY(-17%); object-position: center;" />
+
+
+      <!-- Velo (izquierda) para contraste del texto -->
+      <div class="absolute inset-0 z-5" style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.65) 0%, rgba(0,0,0,.45) 38%, rgba(0,0,0,.22) 60%, rgba(0,0,0,0) 100%); backdrop-filter: saturate(85%) brightness(0.9);"></div>
+
+    <!-- Contenido: texto a la izquierda, centrado verticalmente -->
+<div class="relative z-10 h-full flex items-center" style="transform: translateY(160px); font-family: 'Inter', sans-serif;">
+  <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl text-left pt-12 lg:pt-16 -ml-8 lg:-ml-10">
+      <h1 class="text-white font-extrabold leading-tight text-3xl sm:text-5xl lg:text-6xl drop-shadow-md">
+        Alineadores invisibles...<br class="hidden sm:block">Resultados visibles
+      </h1>
+      <a href="#contacto" class="mt-6 inline-block rounded-full px-6 sm:px-8 py-2.5 sm:py-3 bg-white/90 text-slate-900 font-semibold shadow hover:bg-white">
+        Solicita tu valoración
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+    </section>
+
+   <!-- Sección 3 – Alineadores Dentales -->
+<section class="bg-gradient-to-b from-white to-sky-50">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16 reveal text-slate-700">
+
+    <!-- ¿Qué problemas corrigen los alineadores? -->
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-8 reveal">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h3 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 uppercase">¿QUÉ PROBLEMAS CORRIGEN LOS ALINEADORES?</h3>
+          <p class="text-slate-700 text-lg leading-relaxed mb-4">Los alineadores son eficaces en una amplia gama de casos, siempre tras un diagnóstico especializado:</p>
+          <ul class="space-y-3 text-slate-700 text-lg">
+            <li class="flex items-start"><span class="text-emerald-600 mr-3 mt-1">🦷</span><span>Apiñamientos leves y moderados que generan desgaste o dificultad para la higiene.</span></li>
+            <li class="flex items-start"><span class="text-emerald-600 mr-3 mt-1">🦷</span><span>Espacios o diastemas que afectan la estética y la fonación.</span></li>
+            <li class="flex items-start"><span class="text-emerald-600 mr-3 mt-1">🦷</span><span>Mordida abierta, cruzada o profunda que compromete la función masticatoria.</span></li>
+            <li class="flex items-start"><span class="text-emerald-600 mr-3 mt-1">🦷</span><span>Maloclusiones leves o moderadas que antes requerían brackets visibles.</span></li>
+            <li class="flex items-start"><span class="text-emerald-600 mr-3 mt-1">🦷</span><span>Retrucciones dentales o recaídas tras tratamientos de ortodoncia previos.</span></li>
+          </ul>
+        </div>
+
+        <figure class="flex items-center justify-center">
+          <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-200 w-full">
+            <img src="images/alineadores.webp" alt="Alineadores invisibles" class="w-full h-64 object-cover">
+          </div>
+        </figure>
+      </div>
+    </div>
+
+   <!-- Galería de casos - Cards con franja lateral degradada -->
+<section class="bg-gradient-to-b from-white to-sky-50 py-10">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+
+
+
+
+
+
+<div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+      
+    <!-- Grid de cards -->
+    <div class="flex justify-center">
+      <div class="relative overflow-hidden rounded-2xl bg-white shadow-md border border-slate-200 w-full sm:w-2/3 md:w-1/2 lg:w-2/5">
+        <div class="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-cyan-400 via-sky-500 to-indigo-500"></div>
+        <img src="images/casos.png" alt="Caso clínico alineadores" class="w-full h-64 object-cover rounded-2xl">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Beneficios principales -->
+    <div class="text-center mb-8">
+      <h3 class="text-4xl md:text-5xl font-bold text-slate-900 mb-3">BENEFICIOS PRINCIPALES</h3>
+
+      <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+      
+      <div class="max-w-3xl mx-auto text-slate-700 text-xl md:text-2xl leading-relaxed">
+      Tratamiento cómodo, discreto y planificado digitalmente para resultados más rápidos y predecibles.
+      </div>
+    </div>
+
+    <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-12">
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+      <div class="flex items-start">
+        <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+        <p class="text-slate-700 text-xl leading-relaxed">Tratamiento prácticamente invisible y removible: disfruta de tu día a día sin que nadie note que llevas aparato.</p>
+      </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+      <div class="flex items-start">
+        <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+        <p class="text-slate-700 text-xl leading-relaxed">Planificación digital en 3D: cada movimiento dental está planificado con precisión milimétrica.</p>
+      </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+      <div class="flex items-start">
+        <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+        <p class="text-slate-700 text-xl leading-relaxed">Método 16x4: seguimiento estrecho y correcciones en tiempo real, evitando retrasos.</p>
+      </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+      <div class="flex items-start">
+        <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+        <p class="text-slate-700 text-xl leading-relaxed">Comodidad absoluta: retíralos para comer, cepillarte o en ocasiones especiales.</p>
+      </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+      <div class="flex items-start">
+        <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+        <p class="text-slate-700 text-xl leading-relaxed">Impacto estético temprano: muchos pacientes perciben mejoras visibles desde los primeros meses.</p>
+      </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
+      <div class="flex items-start">
+        <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+        <p class="text-slate-700 text-xl leading-relaxed">Menos refinamientos y mayor rapidez: el control continuo evita prolongar innecesariamente el proceso.</p>
+      </div>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200 md:col-span-2">
+      <div class="flex items-start">
+        <span class="text-emerald-500 text-2xl mr-3 mt-1">✔</span>
+        <p class="text-slate-700 text-xl leading-relaxed">Adaptado a tu estilo de vida: compatible con actividades deportivas, reuniones profesionales y vida social activa.</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+
+    <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <!-- Intro breve -->
+    <h2 class="text-3xl md:text-7xl lg:text-8xl font-bold uppercase text-slate-900 text-center mb-4">ORTODONCIA CON ALINEADORES INVISIBLES</h2>
+<div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+    <p class="max-w-4xl mx-auto text-xl sm:text-2xl leading-relaxed text-slate-800 text-justify md:text-center mb-4">
+      En S&O Dental transformamos tu sonrisa con alineadores transparentes de última generación.
+    </p>
+
+    <p class="max-w-4xl mx-auto text-xl sm:text-2xl leading-relaxed text-slate-800 text-justify md:text-center mb-4">
+      Nuestro método exclusivo <strong>16x4</strong> optimiza cada etapa del tratamiento, acorta los tiempos y asegura resultados más predecibles.
+    </p>
+
+    <p class="max-w-4xl mx-auto text-xl sm:text-2xl leading-relaxed text-slate-800 text-justify md:text-center mb-10">
+      A diferencia de los sistemas tradicionales, nuestro enfoque combina seguimiento constante, tecnología digital 3D y la experiencia clínica de un equipo con amplia trayectoria en ortodoncia.
+    </p>
+    
+<div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+    
+    <!-- El método 16x4 explicado -->
+    <section class="bg-white rounded-2xl p-6 md:p-10 shadow-sm border border-slate-200 mb-12">
+      <h3 class="text-3xl md:text-4xl font-bold uppercase text-slate-900 mb-4">EL MÉTODO 16X4 EXPLICADO</h3>
+      
+      <p class="text-slate-700 mb-4 text-lg">El protocolo <strong>16x4</strong> es un sistema exclusivo que mejora la eficiencia y reduce los errores acumulativos.</p>
+      <ul class="list-inside space-y-3 text-slate-700">
+      <li><strong>Inicio:</strong> Se planifican 16 pares de alineadores, uno por semana, durante 16 semanas (4 meses).</li>
+      <li><strong>Revaloración:</strong> Al finalizar, realizamos un nuevo escaneo clínico.</li>
+      <li class="pl-4">• Si el avance es correcto → continúas con la siguiente fase de alineadores.</li>
+      <li class="pl-4">• Si no es el esperado → replanteamos el plan de inmediato, sin esperar al final del tratamiento.</li>
+      <li class="mt-2"><strong>Ventaja clave:</strong> Al recalcular a los 4 meses, evitamos desviaciones prolongadas, reducimos refinamientos y mantenemos los resultados bajo control constante.</li>
+      </ul>
+      <p class="text-slate-700 mt-4">Este sistema ofrece al paciente mayor seguridad, ya que cada fase está supervisada de forma activa, y al doctor mayor control clínico para tomar decisiones rápidas y eficaces.</p>
+    </section>
+
+    <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <!-- Beneficios emocionales y funcionales -->
+    <section class="bg-gradient-to-b from-white to-sky-50 mb-12">
+      <div class="max-w-4xl mx-auto text-slate-700 text-lg">
+      <h3 class="text-3xl md:text-4xl font-bold uppercase text-slate-900 mb-3">BENEFICIOS EMOCIONALES Y FUNCIONALES PARA EL PACIENTE</h3>
+
+      <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+    
+    
+        <p>Más allá de lo estético, los alineadores aportan una experiencia de tratamiento cómoda y motivadora. Al ser removibles, no interfieren en comidas ni reuniones sociales. El hecho de ver avances tempranos genera confianza y compromiso con el tratamiento. Además, al mejorar la alineación dental se favorece la higiene, se reduce el riesgo de caries y enfermedades periodontales, y se previenen problemas articulares a largo plazo.</p>
+      </div>
+    </section>
+
+    <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <!-- FAQ -->
+    <section class="bg-gradient-to-b from-sky-50 to-white">
+      <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-12 reveal">
+        <h3 class="text-3xl font-extrabold text-slate-900 text-center mb-4 uppercase">PREGUNTAS FRECUENTES (FAQ)</h3>
+        <div class="flex justify-center mb-6">
+          <span class="inline-block w-20 h-1 rounded-full bg-gradient-to-r from-green-400 via-emerald-400 to-sky-400"></span>
+        </div>
+
+        <div class="space-y-6 max-w-4xl mx-auto">
+          <div class="p-6 bg-white rounded-xl border border-slate-200">
+            <h4 class="font-semibold text-slate-900 uppercase text-lg md:text-xl">¿EN QUÉ SE DIFERENCIAN DE LOS BRACKETS?</h4>
+            <p class="mt-2 text-slate-700 text-base md:text-lg">Son removibles, discretos, higiénicos y más cómodos en el día a día.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl border border-slate-200">
+            <h4 class="font-semibold text-slate-900 uppercase text-lg md:text-xl">¿EL TRATAMIENTO ES DOLOROSO?</h4>
+            <p class="mt-2 text-slate-700 text-base md:text-lg">Solo se percibe una ligera presión al inicio de cada alineador, señal de que está funcionando.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl border border-slate-200">
+            <h4 class="font-semibold text-slate-900 uppercase text-lg md:text-xl">¿CUÁNTO DURA EL PROCESO?</h4>
+            <p class="mt-2 text-slate-700 text-base md:text-lg">Depende de la complejidad del caso. El sistema 16x4 permite correcciones rápidas y ajustes periódicos que acortan la duración total.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl border border-slate-200">
+            <h4 class="font-semibold text-slate-900 uppercase text-lg md:text-xl">¿SON EFICACES EN ADULTOS?</h4>
+            <p class="mt-2 text-slate-700 text-base md:text-lg">Sí, los alineadores son adecuados tanto para jóvenes como para adultos, siempre que el caso sea diagnosticado correctamente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex justify-center mb-6">
+      <span class="inline-block w-16 h-1 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400"></span>
+    </div>
+
+    <!-- CTA final -->
+    <section class="bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 reveal text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-4">¿Listo para transformar tu sonrisa?</h2>
+        <p class="text-lg text-slate-700 max-w-2xl mx-auto mb-6">Solicita una valoración y descubre si el método 16x4 con alineadores es indicado para ti. Planificamos cada caso con tecnología 3D y seguimiento clínico cercano.</p>
+        <a href="index.html#contacto" class="inline-flex items-center rounded-full px-6 py-3 bg-green-500 text-white font-semibold hover:bg-green-600">Solicita tu valoración</a>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 py-6 bg-white mt-12 text-center">
+    <img src="images/Logo-Dental.png" alt="Logo S&O Dental" class="mx-auto" style="max-width: 100px; height: auto;">
+    <p class="text-lg font-medium mt-2 mb-2">© <span id="year"></span> S&O Dental</p>
+    <div class="flex justify-center gap-2 text-base text-yellow-600">
+      <a href="aviso-legal.html">Aviso Legal</a><span>–</span>
+      <a href="privacidad.html">Política de Privacidad</a><span>–</span>
+      <a href="cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+
+<!-- === NAV + UTILIDADES (bloque único para TODAS las páginas) === -->
+<script>
+// 0) Utilidades comunes (año, WhatsApp, menú móvil, flip-cards)
+(() => {
+  // Año
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  // WhatsApp (si hay formulario con onsubmit="enviarWhatsApp")
+  window.enviarWhatsApp = function(event){
+    event.preventDefault();
+    const g = id => document.getElementById(id)?.value || '';
+    const texto = encodeURIComponent(`Hola, soy ${g('nombre')}\nTeléfono: ${g('telefono')}\nEmail: ${g('email')}\nMensaje: ${g('mensaje')}`);
+    window.open(`https://wa.me/34910000000?text=${texto}`, '_blank', 'noopener');
+    event.target.reset();
+  };
+
+(() => {
+  if (window.__menuInit) return;
+  window.__menuInit = true;
+
+  const menuBtn    = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIconEl = document.getElementById('menuIcon');
+  if (!menuBtn || !mobileMenu || !menuIconEl) return;
+
+  let open = false;
+  const setIcon = (isOpen) => {
+    menuIconEl.innerHTML = isOpen
+      ? '<path d="M6 18L18 6M6 6l12 12" />'      /* X */
+      : '<path d="M3 6h18M3 12h18M3 18h18" />';  /* ☰ */
+  };
+
+  const applyState = () => {
+    // abre/cierra por altura
+    mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + 'px' : '0px';
+    // y visibilidad (tus páginas con animación usan .show)
+    mobileMenu.classList.toggle('show', open);
+    // accesibilidad
+    menuBtn.setAttribute('aria-expanded', String(open));
+    setIcon(open);
+    // impedir scroll del body cuando está abierto (opcional, cómodo en móvil)
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+
+  menuBtn.addEventListener('click', () => { open = !open; applyState(); });
+
+  // Si pasas a escritorio, cierra el drawer
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) { // ← ahora el corte es en lg
+      open = false; applyState();
+    }
+  });
+})();
+
+  // Flip-cards (inofensivo si no hay)
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('.flip-card');
+    if (card) card.classList.toggle('is-flipped');
+  });
+})();
+
+// 1) Navbar según página
+document.addEventListener('DOMContentLoaded', () => {
+  const navDesktopUL = document.querySelector('header nav ul');
+  const navMobileUL  = document.querySelector('#mobileMenu ul');
+const ctaDesktop = document.querySelector('header > div > div.hidden.md\\:block');
+  if (!navDesktopUL || !navMobileUL || !ctaDesktop) return;
+
+  // Limpia contenido previo para evitar duplicados
+  navDesktopUL.innerHTML = '';
+  navMobileUL.innerHTML  = '';
+
+  // ¿Dónde estamos?
+  const file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const isIndex = file === '' || file === 'index.html';
+
+  // Conjuntos pedidos
+  const NAV_INDEX = [
+    { href: 'index.html#especialidades', text: 'Especialidades' },
+    { href: 'casos_clinicos.html',       text: 'Casos clínicos' },
+    { href: 'index.html#contacto',       text: 'Contacto' }
+  ];
+  const NAV_OTHERS = [
+  { href: 'index.html#inicio',         text: 'Inicio' },
+  { href: 'index.html#especialidades', text: 'Especialidades' },
+  { href: 'alineadores.html',          text: 'Alineadores' },
+  { href: 'laser.html',                text: 'Láser' },
+  { href: 'endodoncias.html',          text: 'Endodoncia' },
+  { href: 'ortodoncia.html',           text: 'Ortodoncia' },
+  { href: 'casos_clinicos.html',       text: 'Casos clínicos' }
+];
+
+
+  const LINKS = isIndex ? NAV_INDEX : NAV_OTHERS;
+
+  // Dibuja enlaces (desktop + móvil)
+  const makeDesktopItem = ({href, text}) => {
+    const li = document.createElement('li');
+    li.innerHTML =
+`<a class="nav-underline text-white/95 hover:text-sky-200 uppercase tracking-normal" href="${href}">${text}</a>`;
+    return li;
+  };
+  const makeMobileItem = ({href, text}) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="${href}" class="block py-2">${text}</a>`;
+    return li;
+  };
+
+  LINKS.forEach(link => {
+    navDesktopUL.appendChild(makeDesktopItem(link));
+    navMobileUL.appendChild(makeMobileItem(link));
+  });
+
+  // CTA (botón a la derecha)
+  // Index => "botón de acción" (Reserva tu cita). Otras páginas => "botón de contacto".
+  ctaDesktop.innerHTML = isIndex
+    ? `<a href="index.html#contacto" class="inline-flex items-center rounded-full px-5 py-2.5 text-white bg-green-500 hover:bg-green-600 font-semibold shadow">
+         Reserva tu cita
+       </a>`
+    : `<a href="index.html#contacto" class="inline-flex items-center rounded-full px-5 py-2.5 text-white bg-green-500 hover:bg-green-600 font-semibold shadow">
+         Contacto
+       </a>`;
+
+  // CTA en móvil (último item del drawer)
+  const liCTA = document.createElement('li');
+  liCTA.className = 'pt-2';
+  liCTA.innerHTML = `<a href="index.html#contacto" class="inline-flex rounded-full px-4 py-2 bg-slate-900 text-white">
+                       ${isIndex ? 'Reserva tu cita' : 'Contacto'}
+                     </a>`;
+  navMobileUL.appendChild(liCTA);
+
+  // Resaltado activo accesible
+  const currentKey =
+  isIndex ? 'index' :
+  file.includes('alineadores')   ? 'alineadores' :
+  file.includes('laser')         ? 'laser' :
+  file.includes('endodoncia')    ? 'endodoncias' :
+  file.includes('ortodoncia')    ? 'ortodoncia' :
+  file.includes('casos_clinicos')? 'casos_clinicos' : '';
+
+  const markActive = (container) => {
+    container.querySelectorAll('a').forEach(a => {
+      const href = (a.getAttribute('href') || '').toLowerCase();
+      const match =
+        (currentKey === 'alineadores'    && href.includes('alineadores.html')) ||
+        (currentKey === 'laser'          && href.includes('laser.html')) ||
+        (currentKey === 'endodoncias'    && href.includes('endodoncias.html')) ||
+        (currentKey === 'ortodoncia'    && href.includes('ortodoncia.html')) ||
+        (currentKey === 'casos_clinicos' && href.includes('casos_clinicos.html')) ||
+        (currentKey === 'index'          && href.includes('#inicio')); // si quisieras marcar "Inicio" en index
+
+      if (match) {
+  // quita clases que compiten
+  a.classList.remove('text-white/95','hover:text-sky-200');
+
+  // aplica verde y negrita
+  a.classList.add('font-bold');
+  a.style.setProperty('color', '#9fc6ac', 'important'); // verde del botón Alineadores
+
+  a.setAttribute('aria-current','page');
+}
+    });
+  };
+  markActive(navDesktopUL);
+  markActive(navMobileUL);
+});
+</script>
+<!-- === / NAV + UTILIDADES === -->
+
+<script>
+  (function () {
+    const items = Array.from(document.querySelectorAll('.reveal'));
+    if (!items.length) return;
+
+    // Respecta prefers-reduced-motion
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      items.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+
+    // Staggered reveal al cargar la página: aparecen gradualmente (no depende de scroll)
+    const stagger = 120; // ms entre cada elemento
+
+    const revealAllOnLoad = () => {
+      items.forEach((el, i) => {
+        // Delay incremental para efecto cascada
+        setTimeout(() => el.classList.add('is-visible'), i * stagger);
+      });
+    };
+
+    // Ejecutar al DOMContentLoaded para asegurar que el layout está listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', revealAllOnLoad);
+    } else {
+      // Cuando ya está listo (ej.: SPA o navegación PJAX)
+      revealAllOnLoad();
+    }
+  })();
+</script>
+
+
+</body>
+</html>
+
+<!-- Lightbox modal (para galería de alineadores) -->
+<div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-4">
+  <button id="lbClose" class="absolute top-4 right-4 text-white text-2xl" aria-label="Cerrar galería">×</button>
+  <button id="lbPrev" class="absolute left-4 text-white text-3xl" aria-label="Anterior">‹</button>
+  <div class="max-w-4xl w-full">
+    <img id="lbImg" src="" alt="" class="w-full h-auto rounded-xl shadow-2xl max-h-[80vh] object-contain">
+  </div>
+  <button id="lbNext" class="absolute right-4 text-white text-3xl" aria-label="Siguiente">›</button>
+</div>
+
+<script>
+(() => {
+  const images = [
+    'images/casos alineadores/alineadores/1.png',
+    'images/casos alineadores/alineadores/2.png',
+    'images/casos alineadores/alineadores/3.png',
+    'images/casos alineadores/alineadores/4.png',
+    'images/casos alineadores/alineadores/5.png',
+    'images/casos alineadores/alineadores/6.png'
+  ];
+
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbClose = document.getElementById('lbClose');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+
+  let idx = 0;
+
+  const open = (i) => {
+    idx = i; lbImg.src = images[idx]; lightbox.classList.remove('hidden'); document.body.style.overflow = 'hidden'; lbImg.focus?.();
+  };
+  const close = () => { lightbox.classList.add('hidden'); document.body.style.overflow = ''; };
+  const prev = () => { idx = (idx - 1 + images.length) % images.length; lbImg.src = images[idx]; };
+  const next = () => { idx = (idx + 1) % images.length; lbImg.src = images[idx]; };
+
+  // Bind gallery cards (divs with role=button)
+  document.querySelectorAll('.gallery-card').forEach(card => {
+    card.addEventListener('click', () => open(Number(card.dataset.index)));
+    // keyboard activation (Enter / Space)
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault(); open(Number(card.dataset.index));
+      }
+    });
+  });
+
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', prev);
+  lbNext.addEventListener('click', next);
+
+  // keyboard
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('hidden')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+
+  // click outside image closes
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+})();
+</script>
